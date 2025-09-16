@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- EmailJS -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+  <!-- Custom JS -->
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- ===================== Floating Shapes / Particles ===================== -->
+  <div class="particles">
+    <span class="particle" style="--size:10px; --x:5%; --y:10%; --delay:0s;"></span>
+    <span class="particle" style="--size:15px; --x:20%; --y:80%; --delay:2s;"></span>
+    <span class="particle" style="--size:8px; --x:50%; --y:30%; --delay:1s;"></span>
+    <span class="particle" style="--size:12px; --x:70%; --y:60%; --delay:3s;"></span>
+    <span class="particle" style="--size:20px; --x:85%; --y:20%; --delay:4s;"></span>
+  </div>
+
+  <!-- ===================== Navigation ===================== -->
+  <header>
+    <nav>
+      <h1>Shubhranshi Patel</h1>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#more-about">More About Me</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===================== Home Section / Hero ===================== -->
+  <section id="home" class="hero two-column">
+    <div class="left-column">
+      <h1>Hello, I'm <span>Shubhranshi</span></h1>
+      <p>Aspiring Software Engineer | Passionate Coder | </p>
+      <button onclick="scrollToSection('projects')">View My Work</button>
+    </div>
+    <div class="right-column">
+      <img src="./Images/my_image.jpeg" alt="Shubhranshi" />
+    </div>
+  </section>
+
+  <!-- ===================== About Section ===================== -->
+  <section id="about" class="two-column">
+    <div class="left-column">
+      <h2>About Me</h2>
+      <p>
+        Hi, I’m <strong>Shubhranshi Patel</strong>, an aspiring Software Engineer driven by curiosity, creativity, 
+        and a love for solving complex problems. From designing interactive 
+        <strong>web applications</strong> to building <strong>machine learning models</strong>, I aim to create scalable 
+        solutions that don’t just work—but make a real impact.
+      </p>
+      <p>
+        I believe every challenge is an opportunity to learn, grow, and innovate. 
+        Whether it’s developing a <em>to-do app in C++</em>, crafting user-friendly 
+        websites in <em>React.js</em>, or experimenting with <em>AI models</em> that predict and classify, 
+        my journey has always been about blending logic with creativity.
+      </p>
+      <p>
+        I’m looking forward to contributing my skills in <strong>machine learning</strong> and 
+        <strong>front-end development</strong> to build intelligent, impactful, and scalable systems 
+        that help companies grow while making life easier for people.
+      </p>
+    </div>
+    <div class="right-column">
+      <img src="./Images/about_me.png" alt="About Me Illustration" style="border-radius: 8px; width: 50%;"/>
+    </div>
+  </section>
+
+  <!-- ===================== Skills Section ===================== -->
+  <section id="skills" class="two-column">
+    <div class="left-column">
+      <h2>Technical Skills</h2>
+      <ul>
+        <li>Programming: C++, Python, SQL</li>
+        <li>Web Development: React.js, HTML, CSS, JavaScript</li>
+        <li>Machine Learning: Supervised, Unsupervised, and Reinforcement Learning</li>
+        <li>Database: MySQL</li>
+        <li>Version Control: Git & GitHub</li>
+      </ul>
+    </div>
+    <div class="right-column">
+      <h2>Interpersonal Skills</h2>
+      <ul>
+        <li>Problem Solving & Creativity</li>
+        <li>Teamwork & Collaboration</li>
+        <li>Adaptability</li>
+        <li>Continuous Learning</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===================== Projects Section ===================== -->
+  <section id="projects" class="projects-container">
+    <h2>My Work</h2>
+    <p>
+      Here are some of the projects I’ve built — from interactive web applications 
+      to intelligent ML models. Each project reflects my approach to solving 
+      real-world problems with scalable solutions. You can also find more of my work on github and collab.
+    </p>
+
+    <!-- Machine Learning Projects -->
+    <div class="project-category">
+      <h2>Machine Learning</h2>
+      <div class="project-list">
+        <div class="project-card">
+          <img src="./Images/weather_prediction.png" alt="Weather Prediction Model">
+          <h3>Weather Prediction Model</h3>
+          <p>Machine learning model forecasting weather conditions with accuracy.</p>
+        </div>
+        <div class="project-card">
+          <img src="./Images/image_classification.png" alt="Image Classifier">
+          <h3>Image Classifier</h3>
+          <p>ML model that categorizes images using classification algorithms.</p>
+        </div>
+        <div class="project-card">
+          <img src="./Images/spam_email.jpg" alt="Spam Email Detection">
+          <h3>Spam Email Detection</h3>
+          <p>ML model that detects spam emails and enhances security.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- C++ Projects -->
+    <div class="project-category">
+      <h2>C++</h2>
+      <div class="project-list">
+        <div class="project-card">
+          <img src="./Images/atm_system.jpg" alt="ATM System">
+          <h3>ATM System</h3>
+          <p>A console-based C++ project simulating ATM operations.</p>
+        </div>
+        <div class="project-card">
+          <img src="./Images/to-do-list-c++.jpg" alt="To-Do App">
+          <h3>To-Do List App</h3>
+          <p>A task management system built in C++ for productivity.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Web Development Projects -->
+    <div class="project-category">
+      <h2>Web Development</h2>
+      <div class="project-list">
+        <div class="project-card">
+          <img src="./Images/ecommerce-websites.jpg" alt="E-Commerce Website">
+          <h3>E-Commerce Website</h3>
+          <p>A seamless online shopping platform with product browsing and cart features.</p>
+        </div>
+        <div class="project-card">
+          <img src="./Images/food_app.jpg" alt="Food Delivery App">
+          <h3>Food Delivery App</h3>
+          <p>Interactive UI for ordering and tracking food deliveries.</p>
+        </div>
+        <div class="project-card">
+          <img src="./Images/to-do_list.jpg" alt="To-Do List App React">
+          <h3>To-Do List App (React)</h3>
+          <p>Task manager web app built using React.js and local storage.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== More About Me Section ===================== -->
+  <section id="more-about" class="two-column">
+    <div class="left-column">
+      <h2>More About Me</h2>
+
+      <h3>Extracurricular Activities</h3>
+      <ul>
+        <li>Member of Coding Club – organized hackathons and coding contests</li>
+        <li>Volunteered in community tech workshops for students</li>
+        <li>Represented college in inter-university hackathons</li>
+      </ul>
+
+      <h3>Hobbies</h3>
+      <ul>
+        <li>Reading technology blogs & self-growth books</li>
+        <li>Solving problems & coding</li>
+        <li>Playing badminton & e-sports</li>
+        <li>Listening to music</li>
+      </ul>
+    </div>
+
+    <div class="right-column">
+      <h3>Strengths</h3>
+      <ul>
+        <li>Quick learner & adaptable</li>
+        <li>Strong problem-solving mindset</li>
+        <li>Team collaboration & leadership</li>
+      </ul>
+
+      <h3>Weaknesses</h3>
+      <ul>
+        <li>Always try to do my work with perfection end up working until the very last moment but alwyas able complete my before the deadline</li>
+        <li>Curiosity often makes me ask too many questions (but improving balance)</li>
+      </ul>
+
+      <h3>Languages Known</h3>
+      <ul>
+        <li>English – Fluent</li>
+        <li>Hindi – Native</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===================== Contact Section ===================== -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+
+    <!-- Contact Info -->
+    <p>Email: <a href="mailto:shubhranshipatel@gmail.com">shubhranshipatel@gmail.com</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/shubhranshipatel" target="_blank">https://linkedin.com/in/shubhranshipatel</a></p>
+    <p>GitHub: <a href="https://github.com/ShubhranshiPatel" target="_blank">https://github.com/ShubhranshiPatel</a></p>
+
+    <!-- Contact Form -->
+    <h3>Leave a Message</h3>
+    <form id="commentForm">
+      <input type="text" id="from_name" name="name" placeholder="Your Name" required>
+      <input type="email" id="from_email" name="email" placeholder="Your Email" required>
+      <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+
+    <!-- Social Links -->
+    <div class="social-links">
+      <h3>Find Me On</h3>
+      <a href="#" target="_blank">🌐 Website</a>
+      <a href="https://linkedin.com/in/shubhranshipatel" target="_blank">💼 LinkedIn</a>
+      <a href="https://github.com/ShubhranshiPatel" target="_blank">🐙 GitHub</a>
+      <a href="https://x.com/shubhransh25212" target="_blank">🐦 Twitter</a>
+      <a href="https://www.instagram.com/shubhranshi3/" target="_blank">📸 Instagram</a>
+    </div>
+  </section>
+
+  <!-- ===================== Footer ===================== -->
+  <footer>
+    <p>© 2025 Shubhranshi Patel. All rights reserved.</p>
+  </footer>
+
+  <!-- ===================== Custom Cursor ===================== -->
+  <div class="cursor"></div>
+  <div class="cursor-follower"></div>
+
+</body>
+</html>
